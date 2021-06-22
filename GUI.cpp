@@ -68,7 +68,7 @@ void TabsGUI::guiInit() {
 
     this->updateButton = new QPushButton{"Update building"};
     lineeditlayout->addWidget(this->updateButton, 7, 0, 1, 2);
-    QObject::connect(this->updateButton, &QPushButton::clicked, this, &TabsGUI::addHandler);
+    QObject::connect(this->updateButton, &QPushButton::clicked, this, &TabsGUI::updateHandler);
 
 
     /*int identifier;
@@ -126,6 +126,52 @@ void TabsGUI::addHandler(){
         }
     auto building = Building(id, descr, area, locationCoord);
     this->bs.add(building);
+}
+
+void TabsGUI::updateHandler() {
+    int id = stoi(this->existingIdLineEdit->text().toStdString());
+    std::string descr = this->updateDescriptionLineEdit->text().toStdString();
+    std::string location = this->updateLocationLineEdit->text().toStdString();
+    std::vector <std::string> locationCoord;
+
+    size_t pos = 0;
+    std::string token;
+    while ((pos = location.find(';')) != std::string::npos) {
+        token = location.substr(0, pos);
+        location.erase(0, pos + 1);
+        locationCoord.push_back(token);
+        std::cout << token << " ";
+    }
+    locationCoord.push_back(location);
+
+    if (descr.empty()) {
+        QMessageBox::warning(this->buildingsList, "Error", "Empty string!");
+        return;
+    }
+
+    for (auto building : this->bs.getElems())
+        for(const auto& tok : locationCoord) {
+            for(const auto& check : building.getCoord())
+                if (check == tok) {
+                    QMessageBox::warning(this->buildingsList, "Error", "Buildings overlap!");
+                    return;
+                }
+        }
+
+    int ok=0;
+    for (auto building : this->bs.getElems())
+        if (building.getIdentifier() == id) {
+            building.setCoord(locationCoord);
+            building.setLocationString(location);
+            building.setDescription(descr);
+            this->bs.notify();
+            ok=1;
+        }
+    if(ok == 0){
+        QMessageBox::warning(this->buildingsList, "Error", "Building does not exist!");
+        return;
+    }
+
 }
 
 void GUI::create_tabs() {

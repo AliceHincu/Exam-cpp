@@ -41,9 +41,12 @@ public:
     ~Building() = default;
     int getIdentifier() const { return this->identifier; }
     std::string getDescription() const { return this->description; }
+    void setDescription(const std::string& d)  {this->description = d; }
     std::string getThematicArea() const { return this->thematicArea; }
     std::string getLocationString() const { return this->locationString; }
+    void setLocationString(const std::string& s) { this->locationString = s;}
     std::vector<std::string>& getCoord() { return this->locationCoord; }
+    void setCoord(std::vector<std::string> v) { this->locationCoord = std::move(v); }
     //void setStatus(const std::string& s) { this->status = s; }
     //void setReviewer(const std::string& r) { this->reviewer = r; }
     friend std::istream& operator>>(std::istream& in, Building& b);

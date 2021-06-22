@@ -79,5 +79,7 @@ public:
 
     //void changeStatus(const QModelIndex &index);
     void addHandler();
+
+    void updateHandler();
 };
 #endif //E2_913ALICEHINCU_GUI_H
