@@ -31,7 +31,7 @@ public:
         this->buildings.push_back(b);
     }
     void modify(int id, std::string descr, std::string loc, std::vector<std::string> vecLoc){
-        for (auto b: buildings){
+        for (auto& b: buildings){
             if(b.getIdentifier() == id){
                 b.setDescription(descr);
                 b.setLocationString(loc);
