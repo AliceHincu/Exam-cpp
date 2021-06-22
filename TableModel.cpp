@@ -22,7 +22,7 @@ QVariant TableModel::data(const QModelIndex& index, int role) const
     int column = index.column();
 
     // get the events
-    std::vector<Building> list = this->serv.getElems();
+    std::vector<Building>& list = this->serv.getElems();
     std::sort(
             list.begin(),
             list.end(),
