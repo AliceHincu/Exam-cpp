@@ -46,6 +46,10 @@ public:
         this->repo->add(b);
         this->notify();
     }
+    void modify(int id, std::string descr, std::string loc, std::vector<std::string> vecLoc) {
+        this->repo->modify(id, descr, loc, vecLoc);
+        this->notify();
+    }
 /*
     void setFile(int idx, const std::string& name) {
         this->repo->getElems()[idx].setReviewer(name);
