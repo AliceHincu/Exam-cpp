@@ -122,6 +122,7 @@ CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtW
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLayout
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QLineEdit
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QListWidget
+CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMessageBox
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QTableView
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QTextEdit
@@ -134,6 +135,7 @@ CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtW
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h
+CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qdialog.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qformlayout.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h
@@ -143,6 +145,7 @@ CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtW
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlistview.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlistwidget.h
+CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmessagebox.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qrubberband.h
 CMakeFiles/e2_913AliceHincu.dir/GUI.cpp.obj: C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h

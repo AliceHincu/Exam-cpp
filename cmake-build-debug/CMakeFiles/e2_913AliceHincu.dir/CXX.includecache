@@ -1204,6 +1204,10 @@ C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QListWidget
 qlistwidget.h
 C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qlistwidget.h
 
+C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMessageBox
+qmessagebox.h
+C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmessagebox.h
+
 C:/Qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton
 qpushbutton.h
 C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h
@@ -1300,6 +1304,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
+C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qdialog.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+
 C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qformlayout.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1386,6 +1396,12 @@ QtCore/qvariant.h
 QtCore/qvector.h
 -
 QtCore/qitemselectionmodel.h
+-
+
+C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
 -
 
 C:/Qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h
@@ -1539,6 +1555,8 @@ QSortFilterProxyModel
 -
 sstream
 -
+QMessageBox
+-
 GUI.h
 C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/GUI.h
 
@@ -1580,14 +1598,6 @@ vector
 algorithm
 -
 
-C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/Repository.cpp
-Repository.h
-C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/Repository.h
-sstream
--
-fstream
--
-
 C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/Repository.h
 domain.h
 C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/domain.h
@@ -1599,14 +1609,6 @@ Observer.h
 C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/Observer.h
 Repository.h
 C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/Repository.h
-
-C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/TableModel.cpp
-TableModel.h
-C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/TableModel.h
-qbrush.h
--
-qfont.h
--
 
 C:/Users/Sakura/Documents/GitHub/FP/e2-913AliceHincu/TableModel.h
 Service.h

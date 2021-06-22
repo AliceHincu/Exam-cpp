@@ -4,6 +4,7 @@
 
 #include <QSortFilterProxyModel>
 #include <sstream>
+#include <QMessageBox>
 #include "GUI.h"
 
 void TabsGUI::guiInit() {
@@ -47,6 +48,29 @@ void TabsGUI::guiInit() {
     lineeditlayout->addWidget(this->addButton, 3, 0, 1, 2);
     rightSide->addLayout(lineeditlayout);
     QObject::connect(this->addButton, &QPushButton::clicked, this, &TabsGUI::addHandler);
+
+    ///update
+    auto* idExistingLabel = new QLabel{"Existing id building:"};
+    this->existingIdLineEdit = new QLineEdit{};
+    lineeditlayout->addWidget(idExistingLabel,4,0,1,1);
+    lineeditlayout->addWidget(this->existingIdLineEdit,4,1,1,1);
+
+
+    auto* updateLocationLabel = new QLabel{"Update location:"};
+    this->updateLocationLineEdit = new QLineEdit{};
+    lineeditlayout->addWidget(updateLocationLabel,5,0,1,1);
+    lineeditlayout->addWidget(this->updateLocationLineEdit,5,1,1,1);
+
+    auto* updateDescriptionLabel = new QLabel{"Update description:"};
+    this->updateDescriptionLineEdit = new QLineEdit{};
+    lineeditlayout->addWidget(updateDescriptionLabel,6,0,1,1);
+    lineeditlayout->addWidget(this->updateDescriptionLineEdit,6,1,1,1);
+
+    this->updateButton = new QPushButton{"Update building"};
+    lineeditlayout->addWidget(this->updateButton, 7, 0, 1, 2);
+    QObject::connect(this->updateButton, &QPushButton::clicked, this, &TabsGUI::addHandler);
+
+
     /*int identifier;
     std::string description;
     //std::string themArea;
@@ -69,12 +93,37 @@ void TabsGUI::addHandler(){
     std::string parsed;
     std::string area = this->thematicArea;
     std::vector<std::string> locationCoord;
-    std::stringstream input_stringstream(location);
+    //std::stringstream input_stringstream(location);
 
-    if (getline(input_stringstream,parsed,';'))
-    {
-        locationCoord.push_back(parsed);
+
+
+    size_t pos = 0;
+    std::string token;
+    while ((pos = location.find(';')) != std::string::npos) {
+        token = location.substr(0, pos);
+        location.erase(0, pos + 1);
+        locationCoord.push_back(token);
+        std::cout << token << " ";
     }
+    locationCoord.push_back(location);
+
+    if (descr.empty()) {
+        QMessageBox::warning(this->buildingsList, "Error", "Empty string!");
+        return;
+    }
+    for (const auto& building : this->bs.getElems())
+        if (building.getIdentifier() == id) {
+            QMessageBox::warning(this->buildingsList, "Error", "Id already exists!");
+            return;
+        }
+    for (auto building : this->bs.getElems())
+        for(const auto& tok : locationCoord) {
+            for(const auto& check : building.getCoord())
+                if (check == tok) {
+                    QMessageBox::warning(this->buildingsList, "Error", "Buildings overlap!");
+                    return;
+            }
+        }
     auto building = Building(id, descr, area, locationCoord);
     this->bs.add(building);
 }

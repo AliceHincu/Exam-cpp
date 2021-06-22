@@ -30,14 +30,14 @@ public:
     void add(const Building& b) {
         this->buildings.push_back(b);
     }
-    /*
-    bool isNotExisting(const SourceFile& source) {
-        for (const auto& f : this->files)
-            if (f.getName() == source.getName())
+
+    bool isNotExisting(const Building& b) {
+        for (const auto& building : this->buildings)
+            if (b.getIdentifier() == b.getIdentifier())
                 return false;
         return true;
     }
-
+/*
     void sort(bool (*compare)(SourceFile, SourceFile)) { std::sort(this->files.begin(), this->files.end(), compare); }
     */
      void load();

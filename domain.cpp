@@ -5,6 +5,7 @@
 
 #include "domain.h"
 #include <sstream>
+#include <iostream>
 
 std::istream& operator>>(std::istream& in, Ethnologist& e)
 {
@@ -49,10 +50,15 @@ std::istream& operator>>(std::istream& in, Building& b)
     std::getline(attrib, thematicArea, ';');
     b.thematicArea = thematicArea;
 
-    while(std::getline(attrib, coord, ';')) {
-        b.locationCoord.push_back(coord);
-        b.locationString+=coord+";";
+    std::getline(attrib, coord, '\n');
+    b.locationString = coord;
+    size_t pos = 0;
+    std::string token;
+    while ((pos = coord.find(';')) != std::string::npos) {
+        token = coord.substr(0, pos);
+        coord.erase(0, pos + 1);
+        b.locationCoord.push_back(token);
     }
-
+    b.locationCoord.push_back(coord);
     return in;
 }

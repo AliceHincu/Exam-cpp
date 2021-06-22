@@ -48,9 +48,13 @@ private:
     QTableView* buildingsList{};
     TableModel* modelList{};
     QPushButton* addButton{};
+    QPushButton* updateButton{};
     QLineEdit* idLineEdit{};
     QLineEdit* descriptionLineEdit{};
+    QLineEdit* existingIdLineEdit{};
+    QLineEdit* updateLocationLineEdit{};
     QLineEdit* locationLineEdit{};
+    QLineEdit* updateDescriptionLineEdit{};
 
 /*
     QLabel* revisedFiles{};
